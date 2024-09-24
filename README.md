@@ -7,6 +7,6 @@ Products Guru: responsible for Products
 Carts Guru: responsible for Cart / Order
 - 
 Sellers Guru: responsible for Inventory / Order Fulfillment
--
+- Lauren Walker
 Social Guru: responsible for Feedback / Messaging
 -
