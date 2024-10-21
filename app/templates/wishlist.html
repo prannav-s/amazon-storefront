@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Your Wishlist</h2>
+
+  {% if items %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Product ID</th>
+          <th scope="col">Time Added</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+        <tr>
+          <td>{{ item.product_id }}</td>
+          <td>{{ humanize_time(item.time_added) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>Your wishlist is currently empty.</p>
+  {% endif %}
+  
+  <a href="{{ url_for('index.index') }}" class="btn btn-primary">Continue Shopping</a>
+{% endblock %}
